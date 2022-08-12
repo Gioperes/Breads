@@ -7,6 +7,7 @@ const PORT = process.env.PORT
 const app = express()
 
 // MIDDLEWARE
+app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'))
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
@@ -30,4 +31,5 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log('listening on port', PORT);
 })
+
 
