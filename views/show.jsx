@@ -1,12 +1,13 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function Show({ bread }) {
+function Show({ bread, index }) {
     // Confirm we are getting our bread data in the terminal.
     // console.log(bread.name)
     return (
         <Default>
             <h3>{bread.name}</h3>
+            <a href={`/breads/${index}/edit`}><button>Edit</button></a>
             <p>
                 and it
                 {
